@@ -31,6 +31,10 @@ function counter() {
  contador()
 
 function cacheFunction(cb) {
+  let cache= new Object;
+  return function (arg) {
+    return cache.hasOwnProperty(arg)? cache[arg]:cache[arg]=cb(arg)
+  } 
   /*
   Ejercicio 2
 
@@ -50,10 +54,6 @@ function cacheFunction(cb) {
   squareCache(5)    // no volverá a invocar a square, simplemente buscará en la caché cuál es el resultado de square(5) y lo retornará (tip: si usaste un objeto, podés usar hasOwnProperty) 
 
   */
- var cb= function argumento(arg) {
-  if(cb.hasOwnProperty(x*2))
-    return this.arg
-  }
   
 } 
 
