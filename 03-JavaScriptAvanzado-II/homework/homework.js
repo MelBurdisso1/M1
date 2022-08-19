@@ -31,10 +31,19 @@ function counter() {
  contador()
 
 function cacheFunction(cb) {
-  let cache= new Object;
+  let objeto= {}
+  return function(arg){
+    if(objeto.hasOwnProperty(arg)){
+      return objeto[arg]
+    } else{
+      return objeto[arg]= cb(arg)
+    }
+  }
+
+  /*let cache= new Object;
   return function (arg) {
     return cache.hasOwnProperty(arg)? cache[arg]:cache[arg]=cb(arg)
-  } 
+  } */
   /*
   Ejercicio 2
 
