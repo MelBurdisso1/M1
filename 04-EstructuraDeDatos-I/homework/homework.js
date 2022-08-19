@@ -50,8 +50,8 @@ class Queue {
     this.queue = [];
   }
 
-    enqueue(element) {
-      this.queue.push(element);
+    enqueue(i) {
+      this.queue.push(i);
       return this.queue;
 
     }
