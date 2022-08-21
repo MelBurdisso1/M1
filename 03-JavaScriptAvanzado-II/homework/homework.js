@@ -22,28 +22,25 @@ function counter() {
   otroContador()      // 3
   */
   
-  var suma = 0 
+  var suma = 0 //declaro una varable suma que inicia en 0
   return function nuevo(){
-    return ++suma;
+    return ++suma; //retorno la suma de cada posicion 
   }
  }  
   var contador =counter()
  contador()
 
-function cacheFunction(cb) {
-  let objeto= {}
-  return function(arg){
-    if(objeto.hasOwnProperty(arg)){
-      return objeto[arg]
+function cacheFunction(cb) { //la funcion recibe como parametro un callback
+  let objeto= {}// declaro un objeto vacio 
+  return function(arg){//funcion q recibe como parametro un argumento
+    if(objeto.hasOwnProperty(arg)){ //me pregunto si el objeto contiene la propiedad de argumento
+      return objeto[arg]// en el caso que si lo tenga, retorno el arg del objeto, es decir su propiedad
     } else{
-      return objeto[arg]= cb(arg)
+      return objeto[arg]= cb(arg)//en le caso que no lo tenga, retorno el callback de argumento.
     }
   }
 
-  /*let cache= new Object;
-  return function (arg) {
-    return cache.hasOwnProperty(arg)? cache[arg]:cache[arg]=cb(arg)
-  } */
+  
   /*
   Ejercicio 2
 
