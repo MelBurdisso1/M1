@@ -75,7 +75,7 @@ function selectionSort(array) {
        min =j;//voy a declarar un nuevo min
       }
     }
-   if(i!== min){//si i es diferente del minimo
+   if(i!== min){//si i es diferente del minimo nuevo
      let aux=array[i];//se hace el intercambio
      array[i]=array[min];//se igualan los indices, al quedar copiados, se intercambias posiciones
      array[min]= aux;//se termina de acomodar el nuevo valor.
