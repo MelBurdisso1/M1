@@ -14,7 +14,7 @@ const {
 // Pista: utilizar el método Array.isArray() para determinar si algun elemento de array es un array anidado
 // [Para más información del método: https://developer.mozilla.org/es/docs/Web/JavaScript/Referencia/Objetos_globales/Array/isArray]
 
-var countArray = function(array) {
+var countArray = function(array) {   
     // Tu código aca:
     let sum = 0;
     for (let i = 0; i < array.length; i++) {
